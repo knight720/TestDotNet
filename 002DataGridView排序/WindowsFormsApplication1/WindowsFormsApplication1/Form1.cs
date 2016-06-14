@@ -74,5 +74,10 @@ namespace WindowsFormsApplication1
         {
             dataGridView1.Columns["c4"].ReadOnly = true;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows[1].Visible = false;
+        }
     }
 }
