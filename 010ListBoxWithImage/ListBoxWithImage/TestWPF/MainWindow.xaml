@@ -1,0 +1,23 @@
+﻿<Window x:Class="TestWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <ListBox x:Name="lbxNormal" Width="100" Height="96" HorizontalAlignment="Left" VerticalAlignment="Top" >
+            <ListBoxItem Content="abc"/>
+            <TabItem Header="def"/>
+            <Image Source="C:\Test\TestDotNet\010ListBoxWithImage\ListBoxWithImage\Resource\images (3).jpg" Height="46" Width="72" />
+
+        </ListBox>
+        <ListBox x:Name="lstDirecotryListing" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,0,0,0" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="3" Text="{Binding Name}"/>
+                        <Image Margin="3" Source="{Binding Path}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
