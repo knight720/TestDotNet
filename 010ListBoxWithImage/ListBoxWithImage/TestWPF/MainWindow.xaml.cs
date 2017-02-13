@@ -22,6 +22,21 @@ namespace TestWPF
         public MainWindow()
         {
             InitializeComponent();
+
+            string path = @"C:\Test\TestDotNet\010ListBoxWithImage\ListBoxWithImage\Resource\images (3).jpg";
+
+            List<TodoItem> items = new List<TodoItem>();
+            items.Add(new TodoItem() { Name = "abc", Image = path });
+            items.Add(new TodoItem() { Name = "def C#", Image = path });
+            items.Add(new TodoItem() { Name = "ghi the car", Image = path });
+
+            lstDirecotryListing.ItemsSource = items;
+        }
+
+        public class TodoItem
+        {
+            public string Name { get; set; }
+            public string Image { get; set; }
         }
     }
 }

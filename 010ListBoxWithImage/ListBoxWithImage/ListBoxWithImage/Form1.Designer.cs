@@ -38,46 +38,51 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(274, 109);
+            this.checkedListBox1.Location = new System.Drawing.Point(13, 13);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(120, 89);
+            this.checkedListBox1.Size = new System.Drawing.Size(159, 104);
             this.checkedListBox1.TabIndex = 0;
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(469, 35);
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(180, 13);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(120, 88);
+            this.listBox1.Size = new System.Drawing.Size(159, 109);
             this.listBox1.TabIndex = 1;
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(768, 65);
+            this.listView1.Location = new System.Drawing.Point(347, 13);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
+            this.listView1.Size = new System.Drawing.Size(160, 120);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // elementHost1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(733, 182);
+            this.elementHost1.Location = new System.Drawing.Point(515, 13);
+            this.elementHost1.Margin = new System.Windows.Forms.Padding(4);
             this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(200, 100);
+            this.elementHost1.Size = new System.Drawing.Size(267, 125);
             this.elementHost1.TabIndex = 3;
             this.elementHost1.Text = "elementHost1";
             this.elementHost1.Child = this.imageListBox1;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1282, 428);
+            this.ClientSize = new System.Drawing.Size(1709, 535);
             this.Controls.Add(this.elementHost1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.checkedListBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

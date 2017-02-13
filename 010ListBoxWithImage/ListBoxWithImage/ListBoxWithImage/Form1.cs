@@ -25,6 +25,18 @@ namespace ListBoxWithImage
             //image.Source = bi;
             ImageListBox ilb = (ImageListBox)elementHost1.Child;
             //ilb.Items.Add(new DirectoryListing(image, "hello"));
+
+            string path = @"C:\Test\TestDotNet\010ListBoxWithImage\ListBoxWithImage\Resource\images (3).jpg";
+
+            List<ImageItem> items = new List<ImageItem>();
+            items.Add(new ImageItem() { Name = "abc", Image = path });
+            items.Add(new ImageItem() { Name = "def C#", Image = path });
+            items.Add(new ImageItem() { Name = "ghi the car", Image = path });
+            items.Add(new ImageItem() { Name = "ghi the car", Image = path });
+            items.Add(new ImageItem() { Name = "ghi the car", Image = path });
+            items.Add(new ImageItem() { Name = "ghi the car", Image = path });
+
+            ilb.ItemsSource = items;
             
         }
     }

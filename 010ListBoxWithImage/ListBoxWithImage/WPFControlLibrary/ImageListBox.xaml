@@ -6,12 +6,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
-        <ListBox x:Name="lstDirecotryListing" >
+        <ListBox x:Name="listBox" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="3" Text="{Binding Name}"/>
-                        <Image Margin="3" Source="{Binding Path}"/>
+                        <Image Margin="3" Width="24" Height="24" Source="{Binding Image}"/>
+                        <TextBlock Margin="3" VerticalAlignment="Center"  Text="{Binding Name}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>

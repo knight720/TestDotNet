@@ -52,6 +52,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="DirectoryListing.cs" />
+    <Compile Include="ImageItem.cs" />
     <Compile Include="ImageListBox.xaml.cs">
       <DependentUpon>ImageListBox.xaml</DependentUpon>
     </Compile>

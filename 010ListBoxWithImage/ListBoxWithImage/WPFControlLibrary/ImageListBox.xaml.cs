@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,11 @@ namespace WPFControlLibrary
         public ImageListBox()
         {
             InitializeComponent();
+        }
+
+        public IEnumerable ItemsSource
+        {
+            set { listBox.ItemsSource = value; }
         }
     }
 }

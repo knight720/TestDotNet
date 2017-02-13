@@ -9,12 +9,13 @@
             <Image Source="C:\Test\TestDotNet\010ListBoxWithImage\ListBoxWithImage\Resource\images (3).jpg" Height="46" Width="72" />
 
         </ListBox>
-        <ListBox x:Name="lstDirecotryListing" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,0,0,0" >
+        <ListBox x:Name="lstDirecotryListing" Width="193" Height="142" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,0,0,0" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Margin="3" Text="{Binding Name}"/>
-                        <Image Margin="3" Source="{Binding Path}"/>
+                        <Image Margin="3" Width="24" Height="24" Source="{Binding Image}"/>
+                        <TextBlock Margin="3" VerticalAlignment="Center"  Text="{Binding Name}"/>
+                        
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
