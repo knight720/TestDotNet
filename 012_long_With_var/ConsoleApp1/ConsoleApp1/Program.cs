@@ -11,27 +11,17 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            for (int i = 0; i < 100000; i++)
+            for (var i = 0; i < 100000; i++)
             {
-                var shopId = 8;
-                object obj = (object)shopId;
-
-                var type = obj.GetType().ToString();
-                Console.WriteLine(type);
-
-                switch (type)
-                {
-                    case "System.Int32":
-                        break;
-                    default:
-                        break;
-                }
-
+                Work w = new Work(i);
+                w.Action();
             }
 
             Console.WriteLine("end...");
-            Console.Read();
+            //Console.Read();
 
         }
+
+
     }
 }
