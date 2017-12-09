@@ -18,7 +18,7 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine("end...");
-            //Console.Read();
+            Console.Read();
 
         }
 
