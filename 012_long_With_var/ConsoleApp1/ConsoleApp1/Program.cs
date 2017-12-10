@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace ConsoleApp1
 {
@@ -11,10 +12,10 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            for (var i = 0; i < 100000; i++)
+            for (var i = 0; i < 10000; i++)
             {
-                Work w = new Work(i);
-                w.Action();
+                //Program.SingleThread(i);
+                Program.MultiThread(i);
             }
 
             Console.WriteLine("end...");
@@ -22,6 +23,20 @@ namespace ConsoleApp1
 
         }
 
+        static void SingleThread(long id)
+        {
+            Work w = new Work(id);
+            w.Action();
+        }
+
+        static void MultiThread(long id)
+        {
+            Work w = new Work(id);
+            Thread thread = new Thread(w.Action);
+            thread.Start();
+        }
 
     }
+
+
 }
