@@ -1,5 +1,5 @@
-﻿<#@ template  debug="true" hostSpecific="true" language="C#" #>
-<#@ output extension=".txt" #>
+﻿<#@ template  debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
 <#@ Assembly Name="System.Core" #>
 <#@ Assembly Name="System.Windows.Forms" #>
 <#@ import namespace="System" #>
@@ -8,18 +8,8 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Collections" #>
 <#@ import namespace="System.Collections.Generic" #> 
-
-哈樓沃爾德
-
 <#
-	Write("by Method");
-	Write(DateTime.Now.ToString());
-	var a = 1;
-	var b = 2;
-	//Write();
-	var v = 11 * 200;
-#>
 
-v=<#= v #>
-max:<#= Math.Max(a,b) #>
-<#= DateTime.Now.ToShortTimeString() #>
+	
+
+#>
