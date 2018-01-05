@@ -42,13 +42,50 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvancedTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BlankTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlankTemplate.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestReusable.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestReusable.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleTemplate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleTemplate.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ReuseableTemplate.ttinclude" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdvancedTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AdvancedTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="BlankTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BlankTemplate.cs</LastGenOutput>
+    </Content>
+    <Content Include="TestReusable.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TestReusable.cs</LastGenOutput>
+    </Content>
+    <Content Include="SimpleTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SimpleTemplate.cs</LastGenOutput>
+    </Content>
     <Content Include="Template1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Template1.txt</LastGenOutput>
