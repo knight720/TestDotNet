@@ -1,55 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extras.DynamicProxy;
 
 namespace Autofac_AOP
 {
-    class Program
+    internal class Program
     {
         private ContainerBuilder _builder;
         private IContainer _container;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Reference
             // http://autofaccn.readthedocs.io/en/latest/advanced/interceptors.html#create-interceptors
 
             var p = new Program();
-            
+
             p.Run();
 
+            // Interface
             // Success
-            p.Register2();
-            p.Run2();
+            //p.Register2();
+            //p.Run2();
 
+            // Class
             // Fail
             //p.Register3();
             //p.Run3();
 
+            // No Interface Attribute on Method
+            //p.Register4();
+            //p.Run4();
 
             Console.ReadLine();
-
         }
 
         private void Run()
         {
             var c = new ClassA();
-            c.MethodOne();
-        }
-
-        private void Run2()
-        {
-            var c = this._container.Resolve<IClass>();
-            c.MethodOne();
-        }
-
-        private void Run3()
-        {
-            var c = this._container.Resolve<ClassA>();
             c.MethodOne();
         }
 
@@ -66,6 +54,12 @@ namespace Autofac_AOP
             this._container = this._builder.Build();
         }
 
+        private void Run2()
+        {
+            var c = this._container.Resolve<IClass>();
+            c.MethodOne();
+        }
+
         private void Register3()
         {
             this._builder = new ContainerBuilder();
@@ -76,6 +70,31 @@ namespace Autofac_AOP
             this._builder.Register(c => new DataCache());
 
             this._container = this._builder.Build();
+        }
+
+        private void Run3()
+        {
+            var c = this._container.Resolve<ClassA>();
+            c.MethodOne();
+        }
+
+        private void Register4()
+        {
+            this._builder = new ContainerBuilder();
+
+            this._builder.RegisterType<ClassB>()
+                .EnableClassInterceptors();
+
+            this._builder.Register(c => new DataCache());
+
+            this._container = this._builder.Build();
+        }
+
+        private void Run4()
+        {
+            var c = this._container.Resolve<ClassB>();
+            c.MethodOne();
+            c.MethodTwo();
         }
     }
 }

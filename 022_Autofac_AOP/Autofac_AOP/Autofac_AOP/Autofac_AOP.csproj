@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassA.cs" />
+    <Compile Include="ClassB.cs" />
     <Compile Include="DataCache.cs" />
     <Compile Include="IClass.cs" />
     <Compile Include="Program.cs" />
