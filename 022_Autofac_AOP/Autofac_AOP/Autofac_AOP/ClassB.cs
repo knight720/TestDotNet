@@ -17,7 +17,7 @@ namespace Autofac_AOP
         }
 
         
-        public void MethodTwo()
+        public virtual void MethodTwo()
         {
             Console.WriteLine("MethodTwo");
         }

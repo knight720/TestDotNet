@@ -28,9 +28,11 @@ namespace Autofac_AOP
             //p.Register3();
             //p.Run3();
 
-            // No Interface Attribute on Method
-            //p.Register4();
-            //p.Run4();
+            // No Interface Attribute on Method Fail
+            // Must On Class
+            // Method Must Virtual
+            p.Register4();
+            p.Run4();
 
             Console.ReadLine();
         }
