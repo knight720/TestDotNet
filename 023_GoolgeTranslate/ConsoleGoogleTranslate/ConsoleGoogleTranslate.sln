@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGoogleTranslate", "ConsoleGoogleTranslate\ConsoleGoogleTranslate.csproj", "{39B8D8EC-3A69-4412-B369-91F8F0BCB66A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39B8D8EC-3A69-4412-B369-91F8F0BCB66A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B8D8EC-3A69-4412-B369-91F8F0BCB66A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B8D8EC-3A69-4412-B369-91F8F0BCB66A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B8D8EC-3A69-4412-B369-91F8F0BCB66A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E02B36CB-9B3D-4242-B7F7-ADD1BE1C33F0}
+	EndGlobalSection
+EndGlobal
