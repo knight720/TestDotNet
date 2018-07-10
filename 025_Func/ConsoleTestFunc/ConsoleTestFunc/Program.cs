@@ -7,37 +7,64 @@ namespace ConsoleTestFunc
         private static void Main(string[] args)
         {
             var p = new Program();
-            var result = p.GetData("Key");
-            Console.WriteLine(result);
-            result = p.GetData("Kkk");
-            Console.WriteLine(result);
+
+            var result = p.GetRData("rKey");
+            //Console.WriteLine(result);
+
+            Console.WriteLine("===");
+
+            result = p.GetMData("mKey");
+            //Console.WriteLine(result);
+            
             Console.ReadLine();
         }
 
-        private string cache;
+        private string _mCache;
+        private string _rCache;
 
-        private string GetData(string key)
+        private string GetMData(string key)
         {
             Func<string> getDataFunc = () =>
             {
-                return this.GetData(key);
+                return this.GetRData(key);
             };
 
             //// key 加入 locale
             key = this.AppendLocale(key);
 
             var result = string.Empty;
-            if (cache != null)
+            if (this._mCache == null)
             {
                 result = getDataFunc();
+                this._mCache = result;
             }
             else
             {
-                cache = key;
-                result = key; 
+                result = this._mCache;
             }
 
-            
+            Console.WriteLine($"GetMDate: {key}");
+
+            return result;
+        }
+
+        private string GetRData(string key)
+        {
+            //// key 加入 locale
+            key = this.AppendLocale(key);
+
+            var result = string.Empty;
+            if (this._rCache != null)
+            {
+                result = this._rCache;
+            }
+            else
+            {
+                this._rCache = key;
+                result = key;
+            }
+
+            Console.WriteLine($"GetRDate: {key}");
 
             return result;
         }
