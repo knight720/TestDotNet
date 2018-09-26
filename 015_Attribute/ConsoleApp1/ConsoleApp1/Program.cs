@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             TranslationClient tc = new TranslationClient();
             TranslationService ts = new TranslationService(tc);
@@ -45,6 +42,18 @@ namespace ConsoleApp1
             Console.WriteLine(entity2);
             Console.WriteLine(entity3);
             Console.WriteLine(entity4);
+
+            //// Test Fist() is null
+
+            var dataType = entity2.GetType();
+
+            var propertyInfo = dataType.GetProperties()
+                .Where(i =>
+                Attribute.IsDefined(i, typeof(RequireTranslationAttribute)))
+                .FirstOrDefault();
+
+            bool isNull = propertyInfo == null;
+            Console.WriteLine($"PropertyInfo is Null: {isNull}");
 
             Console.ReadLine();
         }
