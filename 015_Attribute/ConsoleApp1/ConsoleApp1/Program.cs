@@ -43,18 +43,6 @@ namespace ConsoleApp1
             Console.WriteLine(entity3);
             Console.WriteLine(entity4);
 
-            //// Test Fist() is null
-
-            var dataType = entity2.GetType();
-
-            var propertyInfo = dataType.GetProperties()
-                .Where(i =>
-                Attribute.IsDefined(i, typeof(RequireTranslationAttribute)))
-                .FirstOrDefault();
-
-            bool isNull = propertyInfo == null;
-            Console.WriteLine($"PropertyInfo is Null: {isNull}");
-
             Console.ReadLine();
         }
     }

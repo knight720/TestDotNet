@@ -12,5 +12,10 @@ namespace ConsoleApp1
         /// Moduel Name
         /// </summary>
         public int Value { get; set; }
+
+        /// <summary>
+        /// Content
+        /// </summary>
+        public string Content { get; set; }
     }
 }
