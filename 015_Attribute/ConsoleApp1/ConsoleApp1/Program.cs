@@ -43,6 +43,10 @@ namespace ConsoleApp1
             Console.WriteLine(entity3);
             Console.WriteLine(entity4);
 
+            ////
+            OtherService os = new OtherService();
+            os.DoSomething(entity1);
+
             Console.ReadLine();
         }
     }

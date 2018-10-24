@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5E6754F0-8B15-4A37-90C1-7E5EF05C56D4}</ProjectGuid>
+    <ProjectGuid>{DED1E413-E4D4-4B54-BEBF-FF19C4888112}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>ConsoleApp1</RootNamespace>
     <AssemblyName>ConsoleApp1</AssemblyName>
@@ -42,17 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OAEntity.cs" />
-    <Compile Include="OtherAttribute.cs" />
-    <Compile Include="NonTRAEntity.cs" />
-    <Compile Include="ErrorEntity.cs" />
-    <Compile Include="TRAEntity.cs" />
-    <Compile Include="TranslationClient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequireTranslationAttribute.cs" />
-    <Compile Include="OtherService.cs" />
-    <Compile Include="TranslationService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
