@@ -14,6 +14,7 @@ namespace ConsoleApp1
         public void Run()
         {
             var subAService = _lifetimeScope.Resolve<SubAService>();
+            Locator.Register(_lifetimeScope.Resolve<Client>());
             subAService.Run();
         }
     }

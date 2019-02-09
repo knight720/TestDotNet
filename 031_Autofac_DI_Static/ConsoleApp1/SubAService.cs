@@ -11,7 +11,7 @@ namespace ConsoleApp1
         {
             _lifetimeScope = lifetimeScope;
             _subBService = subBService;
-            Locator.Register(_lifetimeScope.Resolve<Client>());
+            //Locator.Register(_lifetimeScope.Resolve<Client>());
         }
 
         internal void Run()
