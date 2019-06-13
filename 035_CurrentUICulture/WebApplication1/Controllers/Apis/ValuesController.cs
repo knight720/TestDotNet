@@ -12,7 +12,11 @@ namespace WebApplication1.Controllers.Apis
         // GET api/<controller>
         public string Get()
         {
-            CultureInfo.CurrentUICulture = CultureInfo.CreateSpecificCulture("zh-TW");
+            CultureInfo.CurrentUICulture = CultureInfo.CreateSpecificCulture("en-US");
+
+            string[] acceptLanguage = {"en-US", "ee"};
+
+            var alEnum = acceptLanguage.Select(i => i);
 
             IList<string> list = new List<string>();
             for (int i = 0; i < 10; i++)
@@ -20,12 +24,20 @@ namespace WebApplication1.Controllers.Apis
                 list.Add(CultureInfo.CurrentUICulture.Name);
             }
 
-            var result = list.Select(i =>
-                new LocaleEntity()
+            //var result = list.Select(i =>
+            //    new LocaleEntity()
+            //    {
+            //        OuterLocale = i
+            //    }
+            //).ToList();
+
+            var result = (from l in list
+                join a in alEnum
+                    on l equals a
+                select new LocaleEntity()
                 {
-                    OuterLocale = i
-                }
-            ).ToList();
+                    OuterLocale = CultureInfo.CurrentUICulture.Name
+                }).ToList();
 
             return JsonConvert.SerializeObject(result);
         }
